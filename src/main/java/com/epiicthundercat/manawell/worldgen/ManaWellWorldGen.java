@@ -2,10 +2,12 @@ package com.epiicthundercat.manawell.worldgen;
 
 import java.util.Random;
 
+import com.epiicthundercat.manawell.MGlobals;
+
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import net.minecraft.world.chunk.IChunkGenerator;
 import net.minecraft.world.chunk.IChunkProvider;
+import net.minecraft.world.gen.IChunkGenerator;
 import net.minecraftforge.fml.common.IWorldGenerator;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
@@ -39,7 +41,7 @@ public class ManaWellWorldGen implements IWorldGenerator{
 		default:
 			if(world.provider.getDimension() != 0 && world.provider.isSurfaceWorld())
 			{
-				generateSurface(world, random, chunkX*16, chunkZ*16);
+				generateSurface(world, random, chunkX + 8, chunkZ + 8);
 			}
 		}
 		
@@ -53,7 +55,7 @@ public class ManaWellWorldGen implements IWorldGenerator{
 	
 	private void generateNether(World world, Random random, int x, int z) {
 		
-		
+		this.addManaWells(world, random, x, z);
 	}
 	
 	private void generateEnd(World world, Random random, int x, int z) {
@@ -63,7 +65,8 @@ public class ManaWellWorldGen implements IWorldGenerator{
 	
 	
 	private void addManaWells(World world, Random random, int x, int z) {
-		if(random.nextInt(64) == 0)
+		//64
+		if(random.nextInt(MGlobals.MANAWELL_RARITY) == 0)
 		{
 			int posX = x + random.nextInt(16);
 			int posY = 4;
