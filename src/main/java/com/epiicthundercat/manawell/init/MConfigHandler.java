@@ -27,7 +27,7 @@ public class MConfigHandler {
             MinecraftForge.EVENT_BUS.register(new MConfigHandler());
         }
 
-        MGlobals.MANAWELL_RARITY = CONFIG.getInt("ManaWell Rarity", DEF_CAT, 32, 1, 64, "The Higher The Rarer the ManaWells are!");
+        MGlobals.MANAWELL_RARITY = CONFIG.getInt("ManaWell Rarity", DEF_CAT, 32, 1, 64, "The Higher The Rarer the ManaWells are!(Note: Really small numbers can increase worldgen lag!)");
       
         if (CONFIG.hasChanged()) {
             CONFIG.save();
