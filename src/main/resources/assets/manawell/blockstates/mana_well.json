@@ -1,0 +1,39 @@
+{  
+   "forge_marker":1,
+   "defaults":{  
+      "model":"manawell:mana_well",
+      "transform":"forge:default-block"
+   },
+   "variants":{  
+      "fill_level":{  
+         "0":{  
+            "model":"manawell:mana_well0"
+         },
+         "1":{  
+            "model":"manawell:mana_well1"
+         },
+         "2":{  
+            "model":"manawell:mana_well2"
+         },
+         "3":{  
+            "model":"manawell:mana_well3"
+         },
+         "4":{  
+            "model":"manawell:mana_well4"
+         },
+         "5":{  
+            "model":"manawell:mana_well5"
+         }
+      },
+      "normal":[  
+         {  
+
+         }
+      ],
+      "inventory":[  
+         {  
+
+         }
+      ]
+   }
+}
