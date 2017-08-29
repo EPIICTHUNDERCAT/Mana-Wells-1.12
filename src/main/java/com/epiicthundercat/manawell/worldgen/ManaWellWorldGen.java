@@ -55,7 +55,7 @@ public class ManaWellWorldGen implements IWorldGenerator{
 	
 	private void generateNether(World world, Random random, int x, int z) {
 		
-		this.addManaWells(world, random, x, z);
+	//	this.addManaWells(world, random, x, z);
 	}
 	
 	private void generateEnd(World world, Random random, int x, int z) {
